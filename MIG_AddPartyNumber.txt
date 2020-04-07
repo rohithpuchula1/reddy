@@ -1,0 +1,6 @@
+trigger MIG_AddPartyNumber on vlocity_cmt__Party__c (Before Insert) {
+    if(Trigger.IsInsert && Trigger.IsBefore){
+        MIG_AddPartyNumberHandler.AddPartyNumber(Trigger.New);
+
+	// Added Comments
+    }  
